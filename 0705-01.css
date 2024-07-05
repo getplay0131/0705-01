@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  display: none;
+}
+section {
+  max-width: 1000px;
+  margin: auto;
+  border: 3px solid red;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+}
+img {
+  display: block;
+}
+img:not(:first-of-type) {
+  position: absolute;
+}
+[src="/images/bg4.jpg"] {
+  opacity: 0.5;
+  width: 100%;
+}
+[src="/images/4-1.png"] {
+  /* opacity: 0.5; */
+  top: 100px;
+  left: 0;
+  /* border: 3px solid saddlebrown; */
+  width: 37%;
+  animation: rotate_content 3s 1.5s both infinite;
+}
+[src="/images/4-2.png"] {
+  top: 0px;
+  left: 100px;
+  animation: to_Scale 2.5s 2s both;
+  transition: 2.5s;
+}
+[src="/images/4-3.png"] {
+  bottom: 10px;
+  left: 200px;
+  animation: from_Left 2s 1s both;
+}
+[src="/images/4-4.png"] {
+  top: 30px;
+  left: 710px;
+  animation: Basic_Scale 5s 1.5s both infinite;
+}
+[src="/images/4-5.png"] {
+  bottom: 0;
+  left: 650px;
+  animation: Scale2 2s 1.5s both;
+}
+[src="/images/4-6.png"] {
+  left: 800px;
+  bottom: 150px;
+  animation: rotate_Basic 3s 15s both;
+}
+[src="/images/4-7.png"] {
+  left: 800px;
+  bottom: 100px;
+  animation: rotate_Basic 3s 10s both;
+}
+[src="/images/4-8.png"] {
+  left: 800px;
+  bottom: 50px;
+  animation: rotate_Basic 3s 5s both;
+}
+[src="/images/4-9.png"] {
+  left: 810px;
+  bottom: 450px;
+  animation: rotate_Basic 3s 5s both;
+}
+[src="/images/4-10.png"] {
+  top: 100px;
+  left: 700px;
+  animation: Scale2 10s 1.5s both;
+}
+[src="/images/4-11.png"] {
+  bottom: 10px;
+  left: 300px;
+  animation: Scale2 5s 1.5s both;
+  font-size: 10px;
+}
+@keyframes rotate_content {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes from_Left {
+  from {
+    left: -150px;
+    opacity: 0;
+    right: auto;
+    transform: scaleX(0);
+  }
+  to {
+    left: 0;
+    opacity: 1;
+    right: auto;
+    transform: scaleX(50px);
+  }
+}
+@keyframes to_Scale {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1.5);
+  }
+}
+@keyframes Basic_Scale {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(0.1);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes Scale2 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes rotate_Basic {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes rotate_BasicReverse {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
